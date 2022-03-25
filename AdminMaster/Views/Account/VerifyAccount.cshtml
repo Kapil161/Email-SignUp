@@ -1,0 +1,39 @@
+﻿@model AdminMaster.Models.VerifyAccount
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VerifyAccount</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../css/adminlte.min.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form asp-action="VerifyAccount" asp-controller="Account">
+                <p class="text-info">Registration Successfull,Please check your email inbox and enter received OTP</p>
+                <div class="form-group">
+                    <label>Enter OTP</label>
+                    <input type="text" class="form-control" name="Otp" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success" type="submit">SUBMIT</button>
+                </div>
+                <div class="form-group">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
